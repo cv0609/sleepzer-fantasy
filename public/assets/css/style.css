@@ -3183,3 +3183,6 @@ fieldset:last-child {
 }
 
 /* Modal CSS Start */
+.matches .match-team-logo:first-child h6 {
+    text-align: left;
+}
