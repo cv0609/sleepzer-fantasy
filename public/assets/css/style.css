@@ -1230,7 +1230,7 @@ fieldset {
 }
 
 .leagues-pages {
-    height: 350px !important;
+    height: 350px;
     background-color: gray;
 }
 
