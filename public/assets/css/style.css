@@ -1961,6 +1961,7 @@ table tr td a::before {
 
 table tr {
     position: relative;
+    cursor: pointer;
 }
 
 .tab-content {
