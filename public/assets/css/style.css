@@ -1139,10 +1139,7 @@ fieldset {
     width: 100%;
 }
 
-#login-signup input[type="text"],
-#login-signup input[type="email"],
-#login-signup input[type="tel"],
-#login-signup input[type="url"],
+#login-signup input,
 #login-signup textarea {
     width: 100%;
     border: 1px solid #ccc;
@@ -1153,10 +1150,7 @@ fieldset {
     font-family: Pragmatica-bold;
 }
 
-#login-signup input[type="text"]:hover,
-#login-signup input[type="email"]:hover,
-#login-signup input[type="tel"]:hover,
-#login-signup input[type="url"]:hover,
+#login-signup input:hover,
 #login-signup textarea:hover {
     -webkit-transition: border-color 0.3s ease-in-out;
     -moz-transition: border-color 0.3s ease-in-out;
@@ -2881,7 +2875,7 @@ fieldset:last-child {
     font-family: Pragmatica-bold;
 }
 
-#contact input:hover,,
+#contact input:hover,
 #contact textarea:hover,
 #contact select:hover {
     -webkit-transition: border-color 0.3s ease-in-out;
