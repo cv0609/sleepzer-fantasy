@@ -1094,12 +1094,9 @@ img {
     position: relative;
 }
 
-#login-signup input[type="text"],
-#login-signup input[type="email"],
-#login-signup input[type="tel"],
-#login-signup input[type="url"],
+#login-signup input,
 #login-signup textarea,
-#login-signup button[type="submit"] {
+#login-signup button {
     font-family: NeueMachina-bold;
     text-transform: uppercase;
     color: #d7d6d6;
