@@ -1145,6 +1145,7 @@ fieldset {
     padding: 10px;
     border-radius: 5px;
     font-family: Pragmatica-bold;
+    color: #000;
 }
 
 #login-signup input:hover,
