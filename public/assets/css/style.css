@@ -1983,6 +1983,7 @@ table tr {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    border:1px solid #fff;
 }
 
 .matche-det table {
