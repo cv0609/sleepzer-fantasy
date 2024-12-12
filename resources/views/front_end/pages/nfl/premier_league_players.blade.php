@@ -86,7 +86,7 @@
                                 <table cellpadding="0" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -98,7 +98,7 @@
                                         @foreach ($organizedPlayers['DT'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="DT" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -147,7 +147,7 @@
                                         @foreach ($organizedPlayers['WR'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="WR" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -196,7 +196,7 @@
                                         @foreach ($organizedPlayers['DE'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="DE" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -245,7 +245,7 @@
                                         @foreach ($organizedPlayers['S'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="S" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -294,7 +294,7 @@
                                         @foreach ($organizedPlayers['RB'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="RB" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -343,7 +343,7 @@
                                         @foreach ($organizedPlayers['LS'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="LS" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -392,7 +392,7 @@
                                         @foreach ($organizedPlayers['LB'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="LB" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -441,7 +441,7 @@
                                         @foreach ($organizedPlayers['TE'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="TE" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -490,7 +490,7 @@
                                         @foreach ($organizedPlayers['FB'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="FB" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -539,7 +539,7 @@
                                         @foreach ($organizedPlayers['G'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="G" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
@@ -588,7 +588,7 @@
                                         @foreach ($organizedPlayers['CB'] as $item)
 
                                         <tr data-team-id="{{$item->player_team_id}}" data-player-id="{{$item->player_id}}" data-player-role="CB" data-player-name="{{$item->name}}" data-team-logo="{{$item->team_logo}}" data-match-id="{{$matchDetails[0]->fixture_id}}" data-team-name="testing" data-home-team="{{ $matchDetails[0]->home_team_id }}" data-away-team="{{ $matchDetails[0]->away_team_id }}" data-slug-matchid="{{ $matchDetails[0]->id }}">
-                                            <td></td>
+                                            <!-- <td></td> -->
                                             <td class="player-name">
                                                 <p>{{$item->name ?? ''}}</p>
                                             </td>
