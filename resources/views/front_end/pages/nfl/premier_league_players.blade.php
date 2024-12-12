@@ -86,7 +86,7 @@
                                 <table cellpadding="0" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <!-- <th scope="col"></th> -->
+                                            <th scope="col"></th>
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -135,7 +135,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -184,7 +184,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -233,7 +233,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -282,7 +282,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -331,7 +331,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -380,7 +380,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -429,7 +429,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -478,7 +478,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -527,7 +527,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
@@ -576,7 +576,7 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col"></th>
+                                            <!-- <th scope="col"></th> -->
                                             <th scope="col">Selected By</th>
                                             <th scope="col">Team</th>
                                             <th scope="col">Age </th>
