@@ -729,7 +729,7 @@
         });
 
         $(document).on('click', '.player-toggle', function () {
-           alert("OK");
+           
             var team_id = $(this).closest('tr').data('team-id');
             var player_id = $(this).closest('tr').data('player-id');
             var player_role = $(this).closest('tr').data('player-role');
