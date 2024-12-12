@@ -2909,7 +2909,7 @@ fieldset:last-child {
     outline: none;
 }
 
-#contact button[type="submit"] {
+#contact .contact-submit {
     cursor: pointer;
     border: none;
     color: #000;
@@ -2923,12 +2923,12 @@ fieldset:last-child {
 
 }
 
-#contact button[type="submit"]:hover {
+#contact .contact-submit:hover {
     box-shadow: #80f0ff 0px 5px 10px;
     background-color: #fff;
 }
 
-#contact button[type="submit"]:active {
+#contact .contact-submit:active {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
