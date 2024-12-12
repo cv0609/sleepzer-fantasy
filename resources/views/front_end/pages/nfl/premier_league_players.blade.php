@@ -123,9 +123,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -171,10 +169,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                            </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                            </div>                           
                         </div>
                     </div>
 
@@ -221,9 +216,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -270,9 +263,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -319,9 +310,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -368,9 +357,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -417,9 +404,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -466,9 +451,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -515,9 +498,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -564,9 +545,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -613,9 +592,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+                        
                         </div>
                     </div>
 
@@ -625,9 +602,9 @@
 
 
             </div>
-            <div class="team-btns">
-                <a href="my-team" class="next-btn">Next</a>
-            </div>
+                            <div class="team-btns">
+                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
+                            </div>
 
         </div>
     </div>
