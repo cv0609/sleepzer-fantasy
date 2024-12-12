@@ -2869,10 +2869,7 @@ fieldset:last-child {
     margin: 0;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
+#contact input,
 #contact textarea,
 #contact select {
     width: 100%;
@@ -2884,10 +2881,7 @@ fieldset:last-child {
     font-family: Pragmatica-bold;
 }
 
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
+#contact input:hover,,
 #contact textarea:hover,
 #contact select:hover {
     -webkit-transition: border-color 0.3s ease-in-out;
