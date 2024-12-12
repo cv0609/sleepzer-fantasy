@@ -1,0 +1,3175 @@
+@font-face {
+    font-family: Pragmatica;
+    src: url(../fonts/PragmaticaExtended-Medium.ttf);
+}
+
+@font-face {
+    font-family: Pragmatica-Light;
+    src: url(../fonts/PragmaticaExtended-Light.woff);
+}
+
+@font-face {
+    font-family: Pragmatica-bold;
+    src: url(../fonts/PragmaticaExtended-Book.woff);
+}
+
+/* Global CSS Start */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Pragmatica;
+    padding: 0;
+    margin: 0;
+    word-break: break-word;
+    background-image: linear-gradient(90deg, #000000, #737373) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Pragmatica-bold;
+    margin: 0;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+
+
+p {
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+    font-family: Pragmatica;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    line-height: 1.2;
+    margin-bottom: 3px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Pragmatica;
+}
+
+button,
+input[type=text],
+input[type=submit],
+input[type=password],
+textarea,
+input[type=email] {
+    font-family: Pragmatica;
+}
+
+input {
+    font-family: Pragmatica;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.py-7 {
+    padding: 70px 0;
+}
+
+.pt-7 {
+    padding-top: 70px;
+}
+
+.pb-7 {
+    padding-bottom: 70px;
+}
+
+.py-10 {
+    padding: 100px 0;
+}
+
+.pb-10 {
+    padding-bottom: 100px;
+}
+
+.pt-10 {
+    padding-top: 100px;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.m-0-auto {
+    margin: 0 auto
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-contain {
+    background-size: contain;
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.bg-0-0 {
+    background-position: 0% 0%;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.mt-90 {
+    margin-top: 90px;
+}
+
+/* Global CSS End */
+
+/* Section Heading CSS Start */
+.section-heading {
+    color: #80f0ff;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+/* Section Heading CSS End */
+
+/* Header CSS Start */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(90deg, #000000, #737373);
+}
+
+.header-container.fixed-header {
+    box-shadow: #80f0ff 0px 1px 5px 1px;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+
+}
+
+.logo-container a {
+    background-image: url(../images/logo.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 350px;
+}
+
+.menu-toggle-btn {
+    display: none;
+    width: 25px;
+    height: 25px;
+    text-align: right;
+    cursor: pointer;
+    margin: auto 0;
+    font-size: 25px;
+    z-index: 60;
+    background-image: url("../images/menu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-menu ul li a {
+    padding: 10px 0 10px 10px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: normal;
+    position: relative;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: Pragmatica-Light;
+}
+
+.navbar-menu ul li a:hover {
+    color: #80f0ff;
+}
+
+.navbar-menu ul li a.active-link {
+    color: #80f0ff;
+}
+
+.navbar-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #80f0ff;
+    transform-origin: center;
+    transition: all 0.3s ease-out;
+}
+
+.navbar-menu ul li a.active-link::after {
+    transform: scaleX(0.9);
+    background: #80f0ff;
+    transform-origin: center;
+}
+
+.navbar-menu ul li a:hover::after {
+    transform: scaleX(0.9);
+}
+
+.btn {
+    padding: 10px !important;
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: #80f0ff;
+    color: #000 !important;
+    margin-left: 10px;
+    transition: 0.4s all ease-in-out;
+    border-radius: 0;
+    font-family: Pragmatica-bold;
+}
+
+.btn:hover {
+    background-color: #fff;
+    box-shadow: #80f0ff 0px 3px 8px;
+}
+
+.signup-btn {
+    margin-left: 15px;
+}
+
+.login-btn {
+    margin-left: 10px;
+    background: transparent;
+    color: #80f0ff !important;
+    border: 2px solid #80f0ff;
+}
+
+.login-btn:hover {
+    color: #000 !important;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+
+.avatar-content a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.avatar-content svg {
+    width: 18px;
+    height: 18px;
+}
+
+.profile-dropdown-options {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.menu-close-btn {
+    display: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/close.png);
+}
+
+
+/* Header CSS End */
+
+
+/* Home Banner CSS Start */
+.home_banner {
+    background-image: url("../images/home-banner-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home_banner_left {
+    height: 100%;
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.home_banner .row {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.home_banner .row .col-md-5 {
+    padding: 0;
+}
+
+.home_banner_left h1 {
+    font-size: 80px;
+}
+
+.home_banner_left h3 {
+    font-size: 25px;
+    text-align: center;
+    color: #80f0ff;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.home_banner_right {
+    background-image: url("../images/home-banner-image.jpg");
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.banner-btn-wrap {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.banner-btn {
+    display: inline-block;
+    padding: 13px 20px;
+    border: 3px solid #80f0ff;
+    background-color: #80f0ff;
+    color: #000;
+    font-size: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+.banner-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: #80f0ff 0px 5px 6px;
+    transform: translateY(-1px);
+}
+
+/* Home Banner CSS End*/
+
+/* Home About Info CSS Start */
+.home_second_inf_cards_right h3 {
+    color: #80f0ff;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.home_second_inf_cards_right p {
+    color: #80f0ff;
+    line-height: 1.3;
+    max-width: 235px;
+}
+
+.home_second_inf_cards {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.home_info_first {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home_second_inf_cards_left {
+    height: 150px;
+    width: 150px;
+    margin-right: 30px;
+
+}
+
+.home_second_inf_cards_left_icon {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/about-info-image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home_info_first h2 {
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.home_info_first p {
+    font-size: 15px;
+    color: #80f0ff;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    text-transform: math-auto;
+}
+
+/* Home About Info CSS End*/
+
+/* Home Our Leagues CSS Start */
+.our_leagues_cards h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    color: #80f0ff;
+}
+
+.our_leagues_cards_content {
+    display: flex;
+}
+
+.our_leagues_cards {
+    max-width: 300px;
+    position: relative;
+}
+
+.our_leagues_cards::after {
+    content: '';
+    background: #80f0ff;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: -20px;
+    left: 60px;
+}
+
+.our_leagues_cards_icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/home-our-leagues-image.png");
+    height: 100px;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.our_leagues_cards_content p {
+    font-family: Pragmatica-Light;
+    font-size: 13px;
+    text-transform: math-auto;
+    color: #80f0ff;
+    line-height: 1.5;
+}
+
+/* Home Our Leagues CSS End */
+
+/* Home our Promises CSS Start */
+.our-pormises_wrap p {
+    font-size: 23px;
+    text-transform: uppercase;
+    max-width: 883px;
+    margin: 0 auto;
+    color: #80f0ff;
+    font-family: Pragmatica-bold;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.home-our-promises-section {
+    background-image: url("../images/home-our-promises-bg.jpg");
+    background-color: #737373;
+    background-blend-mode: multiply;
+}
+
+/* Home our Promises CSS End*/
+
+/* Footer CSS Start */
+.footer {
+    box-shadow: #80f0ff 0px 3px 20px;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.logo-bottom a {
+    text-align: center;
+    height: 60px;
+    width: 350px;
+    vertical-align: middle;
+    display: inline-block;
+    background-image: url(../images/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer-blocks {
+    width: 30%;
+    padding: 15px;
+}
+
+.footer-blocks h3 {
+    color: #80f0ff;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-blocks ul li {
+    margin-bottom: 10px;
+}
+
+.footer-blocks ul li a {
+    color: #fff;
+    transition: 0.4s all ease-in-out;
+    font-family: Pragmatica-Light;
+}
+
+.footer-blocks ul li a:hover {
+    color: #80f0ff;
+}
+
+
+
+.footer-socials p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-tags-container {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.social-icons {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid #80f0ff;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+}
+
+
+
+.social-ikons {
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fb {
+    background-image: url("../images/fb.png");
+}
+
+.insta {
+    background-image: url("../images/instagram.png");
+}
+
+.twitter {
+    background-image: url("../images/twitter.png");
+}
+
+.social-fb:hover {
+    background-color: #316FF6;
+    transform: translateY(-2px);
+}
+
+.social-insta:hover {
+    background-color: #e1306c;
+    transform: translateY(-2px);
+}
+
+.social-twitter:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+}
+
+
+
+.footer-disclaimer p {
+    font-size: 15px;
+    font-family: Pragmatica-Light;
+}
+
+.footer-copyright-ssl-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #80f0ff;
+    padding: 30px 10px 0 10px;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.copyright-wrap p {
+    font-size: 14px;
+    font-family: Pragmatica-Light;
+}
+
+.ssl-container {
+    height: 50px;
+    width: 300px;
+}
+
+.ssl-logo {
+    background-image: url("../images/ssl.png");
+}
+
+/* Footer CSS End*/
+
+/* AOS Overflow CSS Start */
+.selected-hotels-section {
+    overflow: hidden;
+}
+
+/* AOS Overflow CSS End */
+
+
+/* Pages Banner  CSS Start */
+.sub-banner {
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sub-banner::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 60%);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.sub-banner-content h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.after-banner-text-wrap p {
+    text-align: center;
+}
+
+.blogposts {
+    background-image: url(../images/blogs-banner-image.jpg);
+}
+
+.about-us {
+    background-image: url(../images/about-banner-image.jpg);
+}
+
+.contact-us {
+    background-image: url(../images/contact-banner-image.jpg);
+}
+
+/* Pages Banner  CSS End */
+
+/* Blogs Page CSS Start */
+.custom-blog-cards-section {
+    background-image: url(../images/store-content-bg.jpg);
+}
+
+.custom-blog-cards-wrap {
+    max-width: 1200px;
+}
+
+.custom-blog-card-image {
+    height: 300px;
+    background-image: url("../images/banner.png");
+    border-radius: 15px 15px 0 0;
+}
+
+.custom-blog-card1 {
+    background-image: url("../images/blog-card1-image.jpg");
+}
+
+.custom-blog-card2 {
+    background-image: url("../images/blog-card2-image.jpg");
+}
+
+.custom-blog-card3 {
+    background-image: url("../images/blog-card3-image.jpg");
+}
+
+.custom-blog-card4 {
+    background-image: url("../images/blog-card4-image.jpg");
+}
+
+.custom-blog-card5 {
+    background-image: url("../images/blog-card5-image.jpg");
+}
+
+.custom-blog-card6 {
+    background-image: url("../images/blog-card6-image.jpg");
+}
+
+.custom-blog-card7 {
+    background-image: url("../images/blog-card7-image.jpg");
+}
+
+.custom-blog-card8 {
+    background-image: url("../images/blog-card8-image.jpg");
+}
+
+.custom-blog-card9 {
+    background-image: url("../images/blog-card9-image.jpg");
+}
+
+.custom-blog-card10 {
+    background-image: url("../images/blog-card10-image.jpg");
+}
+
+.custom-blog-card {
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 100%;
+    background-color: #000;
+    transition: all ease-in-out 0.2s;
+    border: 5px solid #80f0ff;
+}
+
+.custom-blog-card:hover {
+    box-shadow: #fff 3px 7px 10px;
+}
+
+.custom-blog-card-content {
+    padding: 20px 0 0 0;
+}
+
+.custom-blog-card-content h3 {
+    color: #80f0ff;
+    line-height: 1.1;
+}
+
+.custom-blog-card-content p {
+    padding: 20px 0 0 0;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+
+.hidden-content p {
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    letter-spacing: 1px;
+    text-underline-offset: 5px;
+}
+
+.custom-blog-card.expanded .hidden-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Blogs Page CSS End */
+
+/* How To Play CSS Start */
+.how-to-play {
+    background-image: url("../images/how-to-play_banner_image.jpg");
+    background-position: 0 40%;
+}
+
+.how_to_play_wrap h2 {
+    font-size: 35px;
+}
+
+.how_to_play_content_wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.how_to_play_content_wrap .row .col-md-6 {
+    margin-bottom: 40px;
+}
+
+.how_to_play_cards {
+    margin-bottom: 35px;
+    box-shadow: #80f0ff 0px 3px 8px;
+    padding: 30px 20px;
+    border-radius: 0 20px;
+    height: 100%;
+}
+
+.how_play_content_info h3 {
+    color: #80f0ff;
+    margin-bottom: 15px;
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.how_play_content_info p {
+    margin-bottom: 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: Pragmatica-light;
+}
+
+.how_play_content_info p strong {
+    color: #80f0ff;
+    letter-spacing: 2px;
+}
+
+.how_play_content_info ul {
+    margin: 10px 0;
+}
+
+.how-play_number {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.how-play_number_inner {
+    height: 45px;
+    width: 45px;
+    background: #80f0ff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #000 0px 3px 8px;
+}
+
+.how-play_number_inner h3 {
+    font-size: 25px;
+    color: #000;
+    text-align: center;
+}
+
+.how_play_content_image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 0 20px;
+}
+
+.how_play_content_image1 {
+    background-image: url("../images/how_play_card1_image.jpg");
+}
+
+.how_play_content_image2 {
+    background-image: url("../images/how_play_card2_image.jpg");
+}
+
+.how_play_content_image3 {
+    background-image: url("../images/how_play_card3_image.jpg");
+}
+
+.how_play_content_image4 {
+    background-image: url("../images/how_play_card4_image.jpg");
+}
+
+.how_play_content_image5 {
+    background-image: url("../images/how_play_card5_image.jpg");
+}
+
+.how_play_content_image6 {
+    background-image: url("../images/how_play_card6_image.jpg");
+}
+
+.how_play_content_image7 {
+    background-image: url("../images/how_play_card7_image.jpg");
+}
+
+.how_play_content_image8 {
+    background-image: url("../images/how_play_card8_image.jpg");
+}
+
+.how_play_content_image9 {
+    background-image: url("../images/how_play_card9_image.jpg");
+}
+
+.how_play_content_image10 {
+    background-image: url("../images/how_play_card10_image.jpg");
+}
+
+
+.down-arrow-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../images/down-arrow.png");
+    height: 100px;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.completed-arrow {
+    background-image: url("../images/checked.png");
+}
+
+.game-instructions-cards-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-instructions-page ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.game-instructions-page ul li {
+    position: relative;
+}
+
+.game-instructions-page ul li:before {
+    content: "•";
+    color: #12e1b9;
+    position: absolute;
+    left: -20px;
+    top: 1px;
+    font-size: 15px;
+}
+
+/* How To Play Page CSS End */
+
+/* Login Signup Form Pages CSS Start */
+.login_signup_form {
+    background-image: url("../images/login-signupbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+    background-color: rgba(0 0 0 / 50%);
+    background-blend-mode: multiply;
+}
+
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#login-signup input[type="text"],
+#login-signup input[type="email"],
+#login-signup input[type="tel"],
+#login-signup input[type="url"],
+#login-signup textarea,
+#login-signup button[type="submit"] {
+    font-family: NeueMachina-bold;
+    text-transform: uppercase;
+    color: #d7d6d6;
+}
+
+#login-signup {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 150px 0 0 0;
+    border-radius: 0 20px;
+    box-shadow: #80f0ff 0px 5px 9px;
+}
+
+#login-signup h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #80f0ff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#login-signup h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#login-signup input[type="text"],
+#login-signup input[type="email"],
+#login-signup input[type="tel"],
+#login-signup input[type="url"],
+#login-signup textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Pragmatica-bold;
+}
+
+#login-signup input[type="text"]:hover,
+#login-signup input[type="email"]:hover,
+#login-signup input[type="tel"]:hover,
+#login-signup input[type="url"]:hover,
+#login-signup textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #737373;
+    font-family: Pragmatica-bold;
+}
+
+#login-signup textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#login-signup button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #80f0ff;
+    color: #000;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Pragmatica-bold;
+    border-radius: 8px;
+    transition: 0.4s all ease-in-out;
+}
+
+#login-signup button[type="submit"]:hover {
+    background: #fff;
+    box-shadow: #80f0ff 0px 4px 5px;
+}
+
+#login-signup button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.jump-text a {
+    color: #80f0ff;
+}
+
+
+#login-signup input:focus,
+#login-signup textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+    color: #d7d6d6;
+}
+
+:-moz-placeholder {
+    color: #d7d6d6;
+}
+
+::-moz-placeholder {
+    color: #d7d6d6;
+}
+
+:-ms-input-placeholder {
+    color: #d7d6d6;
+}
+
+/* Login Signup Form Pages CSS Start */
+
+/* Leagues Pages CSS Start */
+.inline-list {
+    display: inline-block;
+
+}
+
+.leagues-pages {
+    height: 300px;
+    background-color: gray;
+}
+
+.inline-list h3 a,
+.inline-list h3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.home-list {
+    padding-right: 25px;
+}
+
+.next-page-list {
+    padding-left: 30px;
+    position: relative;
+}
+
+.next-page-list::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/leagues-arrow.png);
+    top: 50%;
+    left: -5px;
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    color: #fff;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.american_leagues table {
+    border-radius: 14px;
+    overflow: hidden;
+    min-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.american_leagues tbody tr td {
+    padding: 0;
+}
+
+.american_leagues img.table-img.me-2 {
+    width: 24px;
+    height: 24px;
+}
+
+.american_leagues .last-5 svg {
+    width: 16px;
+    height: 16px;
+}
+
+.american_leagues tbody tr td {
+    padding: 20px 30px;
+    color: #29292a;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.american_leagues-inner h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.american_leagues thead tr th {
+    padding: 20px 30px;
+    color: #29292a;
+    font-size: 14px;
+    vertical-align: middle;
+    background: #f8f9fa;
+    text-transform: uppercase;
+    font-family: Pragmatica-light;
+    letter-spacing: 2px;
+}
+
+.team-view-page .american_leagues thead tr th:nth-child(2),
+.team-view-page .american_leagues thead tr th:nth-child(3),
+.team-view-page .american_leagues thead tr th:nth-child(4) {
+    text-align: center;
+}
+
+.matches-page .american_leagues thead tr th:nth-child(2),
+.team-players-page .american_leagues thead tr th:nth-child(3),
+.team-players-page .american_leagues thead tr th:nth-child(2),
+.team-players-page .american_leagues thead tr th:nth-child(4) {
+    text-align: center;
+}
+
+.matches-page td.player-name p {
+    color: #000;
+    font-family: Pragmatica-light;
+
+}
+
+.matches-page .american_leagues thead tr th:last-child {
+    text-align: right;
+}
+
+
+.american_leagues tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.american_leagues tr:nth-child(even) {
+    background-color: #d9faff;
+}
+
+.american_leagues td.toxic a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Pragmatica-light;
+}
+
+.american_leagues .text-success {
+    color: #198754 !important;
+}
+
+.american_leagues .text-danger {
+    color: #dc3545 !important;
+}
+
+.american_leagues .text-secondary {
+    color: #6c757d !important;
+}
+
+.american_leagues {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.american_leagues.ownership-ops {
+    padding-top: 60px;
+}
+
+.american_leagues-inner h2 {
+    color: #12e1b9;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.back-btn a {
+    display: inline-block;
+    padding: 5px 26px;
+    background: #80f0ff;
+    border-radius: 4px;
+    margin: 0 0 20px;
+    line-height: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.back-btn a:hover {
+    opacity: 0.9;
+}
+
+.american_leagues-inner h2 {
+    color: #80f0ff;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+
+.palyer-header {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 14px;
+    padding: 10px;
+    margin: 0 0 50px;
+    background: url(../images/Background.jpg);
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.palyer-header::after {
+    background: #fafb63;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: -1;
+    border-radius: 14px;
+}
+
+.palyer-header .team-logo img {
+    width: 80px;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.palyer-header .team-logo:last-child {
+    text-align: right;
+}
+
+.palyer-header .match-details {
+    text-align: center;
+}
+
+.palyer-header .team-logo span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.palyer-header .team-logo h6 {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #000;
+}
+
+*/ .team_inner {
+    display: flex;
+    align-items: center;
+}
+
+.palyer-header .team-logo:last-child .team_inner {
+    justify-content: flex-end;
+}
+
+.palyer-header .match-details h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.palyer-header .match-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+
+.palyer-header .match-details span {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+*/ .matches-table tr td {
+    text-align: center;
+}
+
+.matches-table tr td.match-team-logo:first-child {
+    text-align: left;
+}
+
+.matches-table th:first-child {
+    text-align: left;
+}
+
+.matches-table th {
+    background: #00c900;
+    color: #fff;
+}
+
+td.match-position p {
+    text-transform: capitalize;
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.team-btns {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+.next-btn {
+    display: inline-block;
+    background: #80f0ff;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: all 0.3s linear;
+    letter-spacing: 2px;
+}
+
+.next-btn:hover {
+    opacity: 0.9;
+}
+
+.team-view-header ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    margin: 20px auto 0;
+    border: 1px solid #fff;
+    border-width: 1px 0;
+    padding: 10px 0;
+}
+
+.team-view-header {
+    color: #fff;
+    border-radius: 14px;
+    padding: 30px;
+    margin: 0 0 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../images/Background.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.team-view-header::after {
+    background: #80f0ff;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: -1;
+    border-radius: 14px;
+}
+
+
+.team-view-header ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.c-details h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.c-details p {
+    font-size: 16px;
+    color: #000;
+}
+
+.c-logo {
+    background: #80f0ff;
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: #000;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px 0 rgba(0 0 0 / 50%);
+}
+
+.my-team-page .player-dp-inner {
+    background-image: url("../images/NationalFootballLeague.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.my-team-page .team-view-header .c-logo {
+    background: #fff;
+}
+
+.team-view-header h4 {
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+}
+
+td.player-dp img {
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid #501d88;
+    object-fit: cover;
+}
+
+.team-view-table td {
+    text-align: center;
+}
+
+.team-view-table td h6 {
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.team-view-table td span {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.team-view-table td p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #000;
+}
+
+.team-view-table th {
+    text-transform: uppercase;
+}
+
+.team-view-table td {
+    padding: 20px 30px !important;
+}
+
+.my-team-page .team-view-table td {
+    padding: 35px 30px !important;
+}
+
+td.my-team-vice-captain,
+td.my-team-vice-captain {
+    position: relative;
+}
+
+.matches-table th {
+    background: #80f0ff !important;
+    color: #000 !important;
+}
+
+.match-team-logo span {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.match-team-logo span {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Pragmatica-bold;
+    letter-spacing: 2px;
+}
+
+.match-team-logo img {
+    width: 35px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    height: 50px;
+}
+
+.matches-table .table th:first-child {
+    text-align: left;
+}
+
+.matches-table .table th {
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.matches-table table td h6 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #000000;
+    font-family: Pragmatica-light;
+}
+
+.matches-page table td p {
+    color: #000000;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.match-team-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.match-team-inner-image {
+    height: 35px;
+    width: 35px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.match-team-inner-image1 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.match-team-inner-image2 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+.match-team-inner-image3 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.match-team-inner-image4 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+.match-team-inner-image5 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.match-team-inner-image6 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+.match-team-inner-image7 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.match-team-inner-image8 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+.match-team-inner-image9 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.match-team-inner-image10 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+
+.matches-table td.match-team-logo:last-child .match-team-inner {
+    justify-content: flex-end;
+}
+
+.matches-table td.match-team-logo:last-child h6 {
+    text-align: right;
+}
+
+.matches-table td.match-team-logo h6 {
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+    font-family: Pragmatica-light;
+    text-align: center;
+}
+.my-matches .american_leagues-inner h2 {
+    margin-bottom: 0;
+}
+
+
+td.match-team-logo a::before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    inset: 0;
+}
+
+td.match-status p {
+    color: #000;
+    font-size: 19px;
+}
+
+.my-matches-page table td:nth-child(2) p {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.my-matches-page table td:nth-child(2) h6 {
+    font-weight: 600;
+}
+
+.league-logo {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+.league-logo-inner {
+    width: 35px;
+    height: 35px;
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.league-logo-inner1 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.league-logo-inner2 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+.leagues-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
+.leagues-table tbody tr {
+    position: relative;
+}
+
+.leagues-table tbody td.league-logo a::before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    inset: 0;
+}
+
+.leagues-table th {
+    text-align: left;
+}
+
+.leagues-table td h6 {
+
+    color: #000000;
+    font-family: Pragmatica;
+}
+
+.leagues-table td {
+    padding: 20px 30px !important;
+}
+
+.leagues-table td p {
+    color: #000;
+    letter-spacing: 1px;
+    font-family: Pragmatica;
+}
+
+table tr:nth-child(odd):hover {
+    background: #bbf0f7 !important;
+}
+
+.leagues-table,
+.matches-table,
+.team-view-table,
+.american_leagues-inner-content {
+
+    width: 100%;
+    overflow-x: auto;
+    border-radius:0 0  14px 14px;
+}
+
+.american_leagues-inner-content table th {
+    background: #80f0ff !important;
+    color: #000 !important;
+}
+
+section.destination.firsts {
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+section.destination.seconds {
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+td.toxic a {
+    color: #000;
+}
+
+.community-icon a img {
+    filter: brightness(0) invert(1);
+    width: 38px;
+    height: 38px;
+}
+
+.community-icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+
+.avatar-content h5 {
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.cards-col {
+    overflow: hidden;
+}
+
+.p-content-inner strong {
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.g-started h5 {
+    font-size: 22px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: #ffcf21;
+    letter-spacing: 3px;
+}
+
+.contact-page .g-started h5 {
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.contact-page section.getting {
+    padding-top: 60px;
+}
+
+section.inner-bnr.premier-league {
+    background: url(../images/leagues.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sportzway {
+    padding-bottom: 20px;
+}
+
+table tr td a::before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    inset: 0;
+}
+
+table tr {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.toggle-target {
+    background: #80f0ff;
+    width: 100%;
+    padding: 10px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.matche-det table {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.american_leagues-inner-content .matche-det table th {
+    color: #000 !important;
+    background-color: #e9ecef !important;
+    border-color: #dee2e6;
+}
+
+.matches-details .credits_points span {
+    color: #000;
+}
+
+.matches-details .player-name p,
+.team-players-page .player-name p {
+    color: #000;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.match-details-page .matches-table .table th {
+    text-align: left;
+    padding: 15px 30px;
+}
+td.my-team-captain,td.my-team-vice-captain {
+    position: relative;
+}
+
+.toggle-target a {
+    color: #000;
+    font-size: 17px;
+    padding: 10px 30px;
+    font-family: Pragmatica-bold;
+    width: 25%;
+    text-align: center;
+}
+
+.credits_points button {
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+    right: 20px;
+}
+
+.credits_points button.minus {
+    border-color: #e71e3c;
+    color: #e71e3c;
+    display: none;
+}
+
+.credits_points button.plus {
+    border-color: #00c900;
+    color: #00c900;
+}
+
+.credits_points button.plus i {
+    color: #00c900;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+td.match-team-logo h6 {
+    font-size: 16px !important;
+}
+
+td.match-team-logo a {
+    color: #000;
+}
+
+.match-team-logo-inner,
+.team-players-logo-inner,
+.player-dp-inner,
+.my-match-team-logo-inner {
+    height: 35px;
+    width: 35px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.my-match-team-logo-inner {
+    margin: 0 auto;
+}
+
+.my-matches-page .american_leagues thead tr th:nth-child(3),
+.my-matches-page .american_leagues thead tr th:nth-child(4),
+.my-matches-page .american_leagues thead tr th:nth-child(5) {
+    text-align: center;
+}
+
+
+
+.avatar-content img {
+    width: 45px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.avatar .dropdown {
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    width: max-content;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    left: 0;
+    top: 120%;
+    display: none;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/dummy.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.profile {
+    position: relative;
+    /* display: none; */
+    margin-left: 30px;
+}
+
+.avatar-content span {
+    color: #000;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    padding: 5px 0;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.dropdown li a img {
+    margin-right: 10px;
+    max-width: 20px;
+}
+
+div#mySidenavs {
+    display: flex;
+    gap: 20px;
+}
+
+div#mySidenavs {
+    display: flex;
+    gap: 20px;
+}
+
+.avatar-content a span {
+    color: #fff;
+    font-size: 17px;
+}
+
+.avatar-content svg {
+    height: 20px;
+    width: 20px;
+    background: #000;
+    fill: #fff;
+}
+
+.profile-dropdown-options {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.profile-image-dropdown {
+    background-image: url("../images/profile-image.png");
+}
+
+
+.profile-image-stadium {
+    background-image: url("../images/stadium.png");
+}
+
+.profile-image-logout {
+    background-image: url("../images/logout.png");
+}
+
+.avatar-content i {
+    color: #ffff;
+    cursor: pointer;
+}
+
+.avatar-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-content a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown ul {
+    display: block !important;
+}
+
+.dropdown ul li a {
+    color: #000 !important;
+}
+
+.dropdown ul li::after {
+    display: none !important;
+}
+
+.dropdown ul li {
+    margin-left: 0 !important;
+}
+
+.profile ul li a {
+    padding: 5px 0 !important;
+    text-transform: capitalize !important;
+    display: flex;
+    align-items: center;
+}
+
+.mmy-profile-inner {
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: #80f0ff 0px 8px 15px;
+    border-radius: 0 20px;
+    overflow: hidden;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.my-profile {
+    background-image: url("../images/my-profile-page-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0 0 0 / 50%);
+    background-blend-mode: multiply;
+}
+
+.profile-side {
+    width: 40%;
+    height: auto;
+    padding: 20px 10px;
+    border-radius: 20px 0 0 20px;
+}
+
+.col-sec {
+    width: 60%;
+}
+
+.user-content-update {
+    padding: 30px;
+
+    border-radius: 0 20px 20px 0;
+}
+
+.user-img {
+    text-align: center;
+    position: relative;
+}
+
+.update_img_user {
+    position: relative;
+    width: 80px;
+    margin: 0 auto;
+    height: 80px;
+    border-radius: 50%;
+}
+.update_img_user_img {
+    position: relative;
+    width: 80px;
+    margin: 0 auto;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #80f0ff;
+    overflow: hidden;
+}
+
+.edit_pan svg {
+    height: 12px;
+}
+
+.edit_pan {
+    position: absolute;
+    top: 63%;
+    background: #80f0ff;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    transform: translate(0%, 0%);
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.user_name h3 {
+    font-size: 20px;
+    margin: 10px 0 0;
+    color: #fff;
+}
+
+.content-bar {
+    margin-bottom: 10px;
+}
+
+.content-bar a {
+    display: inline-block;
+    color: #000;
+    background-color: #80f0ff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+    font-family: Pragmatica-bold;
+}
+
+.content-bar a:hover {
+    background-color: #fff;
+    box-shadow: #80f0ff 0px 3px 8px;
+}
+
+.content-bar span {
+    background: #80f0ff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    color: #000;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.4s all ease-in-out;
+}
+
+.content-bar span:hover {
+    background: #fff;
+    box-shadow: #80f0ff 0px 3px 8px;
+}
+
+.edit_option_bar {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.user-img {
+    text-align: center;
+    position: relative;
+}
+
+span.edit_pan i {
+    color: #ffff;
+}
+
+.american_leagues .row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.american_leagues .row .mb-3.col-sm-6 {
+    width: 48%;
+}
+
+.american_leagues .row .mb-3.col-sm-6 input {
+    width: 100%;
+}
+
+.user-content-box input {
+    color: #000;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 15px;
+}
+
+.para {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.556;
+    color: #fafaff;
+}
+
+.user-content-box button {
+    width: auto;
+    padding: 11px 44px;
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 20px;
+    background-color: #80f0ff;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #000;
+    cursor: pointer;
+    transition: 0.4s all ease-in-out;
+}
+
+.user-content-box button:hover {
+    background-color: #fff;
+    color: #80f0ff;
+    box-shadow: #6bfff7 0px 3px 8px;
+}
+
+.reset-password {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 12px;
+}
+
+.reset-password a {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    text-underline-offset: 5px;
+}
+
+a.tab.active {
+    background: #fff;
+}
+
+.plyr-hedr {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 0 0 50px;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.plyr-hedr::after {
+    background: #80f0ff;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: -1;
+    border-radius: 14px;
+}
+
+td.match-score h4 {
+    color: #000;
+    font-size: 17px;
+    font-family: Pragmatica-bold;
+}
+
+.plyr-hedr .team-logo img {
+    width: 80px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    padding: 12px;
+}
+
+.plyr-hedr .team-logo:last-child {
+    text-align: right;
+}
+
+.plyr-hedr .match-details {
+    text-align: center;
+}
+
+.plyr-hedr .team-logo span {
+    font-size: 18px;
+    color: #000;
+    padding: 0 5px;
+}
+
+
+.match-details-header-logo,
+.team-players-header-logo {
+    height: 35px;
+    width: 35px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+}
+
+.match-details-header-logo1 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.match-details-header-logo2 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+.team-players-header-logo1 {
+    background-image: url("../images/NationalFootballLeague.png");
+}
+
+.team-players-header-logo2 {
+    background-image: url("../images/CanadianFootballLeague.png");
+}
+
+.leagues .small-logo tbody tr td:first-child {
+    width: 120px;
+}
+
+
+.plyr-hedr .team-logo h6 {
+    text-transform: capitalize;
+    color: #000;
+}
+
+.team_inner {
+    display: flex;
+    align-items: center;
+}
+
+.plyr-hedr .team-logo:last-child .team_inner {
+    justify-content: flex-end;
+}
+
+.plyr-hedr .match-details h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: Pragmatica;
+}
+
+.plyr-hedr .match-details p {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: Pragmatica;
+}
+
+.plyr-hedr .match-details span {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: Pragmatica;
+}
+
+.american_leagues tbody tr td p {
+    color: #000;
+    font-family: Pragmatica;
+}
+
+.paginate_button {
+    padding: 5px 15px;
+    color: #fff;
+}
+
+td.player-name p {
+    color: #000;
+    font-family: Pragmatica;
+}
+
+.american_leagues tbody tr td p {
+    color: #000;
+    font-size: 14px;
+    font-family: Pragmatica;
+    letter-spacing: 2px;
+}
+
+.palyer-header::after {
+    background: #80f0ff;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: -1;
+    border-radius: 14px;
+}
+
+.palyer-header .team-logo h6 {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #000;
+    font-family: Pragmatica;
+}
+
+.palyer-header .match-details span {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: Pragmatica;
+}
+
+.match-details .flex {
+    justify-content: center !important;
+}
+
+.my-team-page .team-view-table td p {
+    position: relative;
+    font-family: Pragmatica;
+}
+
+.my-team-page .player-toggle {
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+    border-color: #12e1b9 !important;
+}
+
+.font-medium {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.matches-details td.credits_points {
+    position: relative;
+}
+
+.american_leagues table {
+    position: relative;
+}
+
+.matches thead tr th:nth-child(3) {
+    text-align: right;
+}
+
+.my-team-page thead tr th {
+    text-align: center;
+}
+
+.my-matches thead tr th {
+    text-align: center;
+}
+
+.my-matches .matches-table th:first-child {
+    text-align: center;
+}
+
+.matche-details-logo {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+.match-details-page .matche-details-logo1 {
+    background-image: url(../images/NationalFootballLeague.png);
+}
+
+.match-details-page .matche-details-logo2 {
+    margin-left: auto;
+    background-image: url(../images/CanadianFootballLeague.png);
+}
+
+.match-details-page .flex {
+    justify-content: center;
+}
+
+.team-view-header .c-logo {
+    background: #fff;
+}
+
+.team-view-page thead tr th {
+    text-align: center;
+}
+
+.team-view-page thead tr th:first-child {
+    text-align: left;
+}
+
+/* Leagues Pages CSS End */
+
+/* Header Pages CSS Start */
+.pages-banner {
+    height: 550px;
+    background-color: rgba(0 0 0/20%);
+    background-blend-mode: multiply;
+}
+
+.leagues-pages {
+    height: 300px;
+    background-image: url("../images/leagues-banner-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0 0 0/20%);
+}
+
+.about-banner {
+    background-image: url("../images/about-banner-image.jpg");
+}
+
+.contact-banner {
+    background-image: url("../images/contact-banner-image.jpg");
+}
+
+.after-banner-text-wrap strong {
+    color: #80f0ff;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.top-pages-cards-content h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #12e1b9;
+}
+
+.top-pages-cards {
+    margin-bottom: 35px;
+    padding: 20px;
+    border-radius: 20px 0;
+    box-shadow: #80f0ff 0px 2px 8px 3px;
+}
+
+.top-pages-cards:last-child {
+    margin-bottom: 0;
+}
+
+.top-pages-cards-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.top-pages-cards-content p strong {
+    color: #80f0ff;
+}
+
+.top-pages-cards-image {
+    height: 100%;
+    border-radius: 20px 0;
+}
+
+.about-card1-image {
+    background-image: url("../images/about-card1-image.jpg");
+}
+
+.about-card2-image {
+    background-image: url("../images/about-card2-image.jpg");
+
+}
+
+.about-card3-image {
+    background-image: url("../images/about-card3-image.jpg");
+
+}
+
+.about-card4-image {
+    background-image: url("../images/about-card4-image.jpg");
+
+}
+
+.about-card5-image {
+    background-image: url("../images/about-card5-image.jpg");
+}
+
+.about-card6-image {
+    background-image: url("../images/about-card6-image.jpg");
+}
+
+
+
+.top-pages-cards-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header-pages-content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-pages-cards h3 {
+    color: #80f0ff;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.header-pages-cards strong {
+    color: #80f0ff;
+    letter-spacing: 2px;
+}
+
+.header-pages-cards p {
+    line-height: 1.3;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: Pragmatica-Light;
+}
+
+.header-pages-cards {
+    margin-bottom: 30px;
+}
+
+.contact-page-form-section {
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 0 20px;
+    box-shadow: #80f0ff 0px 5px 10px 5px;
+}
+
+.form-wrapper {
+    height: auto;
+    width: 100%;
+}
+
+#contact {
+    background-image: url("../images/how-we-compare-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    max-width: 500px;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+fieldset:last-child {
+    margin: 0;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact select {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Pragmatica-bold;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover,
+#contact select:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#contact select {
+    max-width: 100%;
+    color: #444546;
+    outline: none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    border: none;
+    color: #000;
+    margin: 0 0 5px;
+    width: auto;
+    padding: 11px 30px;
+    font-size: 17px;
+    transition: 0.4s all ease-in-out;
+    background-color: #80f0ff;
+    font-family: Pragmatica-bold;
+
+}
+
+#contact button[type="submit"]:hover {
+    box-shadow: #80f0ff 0px 5px 10px;
+    background-color: #fff;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+    text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    border: 1px solid #444546;
+}
+
+::-webkit-input-placeholder,
+::-webkit-select-placeholder {
+    color: #444546;
+}
+
+:-moz-placeholder {
+    color: #444546;
+}
+
+:-ms-input-placeholder {
+    color: #444546;
+}
+
+.contact-card1-image {
+    background-image: url("../images/contact-page-image.jpg");
+    height: 100%;
+    border-radius: 0 20px;
+    margin-bottom: 20px;
+}
+
+#contact select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../images/contact-select-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 30px;
+}
+
+.top-pages-cards h3 {
+    margin-bottom: 15px;
+    color: #80f0ff;
+    text-transform: uppercase;
+}
+
+.top-pages-cards p a {
+    color: #80f0ff;
+    font-weight: 600;
+}
+
+.top-pages-cards p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-family: Pragmatica-Light;
+}
+
+.top-pages-cards-content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.top-pages-cards-content ul li {
+    position: relative;
+}
+
+.top-pages-cards-content ul li:before {
+    content: "•";
+    color: #80f0ff;
+    position: absolute;
+    left: -20px;
+    top: 3.5px;
+    font-size: 16px;
+}
+
+.header-pages-cards p a {
+    color: #00BFFF;
+}
+
+.header-pages-cards ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.header-pages-cards ul li {
+    position: relative;
+}
+
+.header-pages-cards ul li::before {
+    content: "•";
+    color: #80f0ff;
+    position: absolute;
+    left: -20px;
+    top: 3.5px;
+    font-size: 16px;
+}
+
+
+/* Footer Pages CSS Start*/
+.footer-pages-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    border-radius: 0 20px;
+    box-shadow: #80f0ff 0px 7px 11px 0px;
+}
+
+.footer-pages-content-grp {
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.footer-pages-content-grp:last-child {
+    margin-bottom: 0px;
+}
+
+.footer-pages-content-grp h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #80f0ff;
+    line-height: 1.4;
+}
+
+.footer-pages-content-grp strong {
+    color: #80f0ff;
+}
+
+.footer-pages-content-grp p {
+    font-size: 17px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-family: Pragmatica-Light;
+}
+
+.footer-pages-content-grp p a {
+    color: #00BFFF;
+}
+
+.footer-pages-content-grp ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.footer-pages-content-grp ul li {
+    position: relative;
+}
+
+.after-banner-text-wrap h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #80f0ff;
+}
+
+.after-banner-text p {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-family: Pragmatica-Light;
+}
+
+.footer-pages-content-grp ul li:before {
+    content: "•";
+    color: #80f0ff;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    font-size: 16px;
+}
+
+.personal-data-policy {
+    background-image: url(../images/personal-banner-image.jpeg);
+}
+
+.privacy-policy {
+    background-image: url(../images/privacy-banner-image.jpg);
+}
+
+.terms-conditions {
+    background-image: url(../images/terms-banner-image.jpg);
+}
+
+/* Footer Pages CSS End*/
+
+
+/* Modal CSS Start */
+.modal-body p {
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+.modal-image {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal-images-inner {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.modal-failure-image {
+    background-image: url(../images/modal-close.png);
+}
+
+.modal-success-image {
+    background-image: url(../images/modal-check.png);
+}
+
+.modal-btn {
+    color: #000;
+    background-color: #80f0ff;
+    border: none;
+    padding: 11px 30px !important;
+    width: auto;
+    font-size: 17px;
+    font-weight: 600;
+    border: 1px solid #80f0ff;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+}
+
+.modal-btn:hover {
+    background-color: #fff;
+    border: 1px solid #80f0ff;
+    color: #000;
+}
+
+.modal-header {
+    border-bottom: 1px solid #80f0ff;
+}
+
+.modal-footer {
+    border-top: 1px solid #80f0ff;
+}
+
+/* Modal CSS Start */
