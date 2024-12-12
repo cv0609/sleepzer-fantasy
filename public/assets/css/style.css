@@ -2020,7 +2020,7 @@ td.my-team-captain,td.my-team-vice-captain {
     font-size: 17px;
     padding: 10px 30px;
     font-family: Pragmatica-bold;
-    width: 25%;
+    width: 15%;
     text-align: center;
 }
 
@@ -2717,6 +2717,7 @@ td.player-name p {
     background-color: rgb(0 0 0 / 60%);
     height: 100%;
     width: 100%;
+    z-index: -1;
 }
 .banner-content {
     margin-top: 50px;
@@ -3185,4 +3186,10 @@ fieldset:last-child {
 /* Modal CSS Start */
 .matches .match-team-logo:first-child h6 {
     text-align: left;
+}
+button.player-toggle {
+    padding: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
