@@ -674,6 +674,7 @@
 
 
     });
+    var myTeam = @json(Session::get('myTeam', []));
 
     function autoSelect()
  {
@@ -834,7 +835,6 @@ $('.next-btn').on('click',function (e) {
         });
 
 
-        var myTeam = @json(Session::get('myTeam', []));
 
         $('.tbody tr').each(function () {
 
