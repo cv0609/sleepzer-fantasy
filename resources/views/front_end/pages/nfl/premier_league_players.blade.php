@@ -1,4 +1,6 @@
 @extends('front_end.layout.main')
+@section('title', 'Matche Details')
+
 @section('content')
 
 

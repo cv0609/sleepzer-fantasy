@@ -1,4 +1,6 @@
 @extends('front_end.layout.main')
+@section('title', 'Blog Post')
+
 @section('content')
 
 <!--Blogs Banner Section Start -->

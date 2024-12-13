@@ -1,4 +1,6 @@
 @extends('front_end.layout.main')
+@section('title', 'How To play')
+
 @section('content')
 <!--How To Play Banner Section Start -->
 <section class="sub-banner how-to-play  bg-cover bg-no-repeat">
