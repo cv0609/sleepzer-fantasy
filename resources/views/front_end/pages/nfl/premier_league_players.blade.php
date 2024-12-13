@@ -826,8 +826,9 @@ $('.next-btn').on('click',function (e) {
             }
         });
 
-
+        $(document).ready(function () {
         autoSelect();
+    });
 function autoSelect()
  {
     $('.tbody tr').each(function () {
