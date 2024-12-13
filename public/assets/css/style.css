@@ -273,7 +273,7 @@ img {
     font-size: 25px;
     z-index: 60;
     background-image: url("../images/menu.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -289,7 +289,7 @@ img {
 }
 
 .navbar-menu ul li a {
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 10px 15px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -1451,11 +1451,13 @@ fieldset {
 .palyer-header .match-details h6 {
     font-size: 16px;
     margin-bottom: 10px;
+    color:#000
 }
 
 .palyer-header .match-details p {
     font-size: 16px;
     margin-bottom: 10px;
+    color: #000;
 
 }
 
@@ -2385,7 +2387,6 @@ span.edit_pan i {
     padding: 11px 44px;
     display: inline-block;
     margin-left: 0;
-    margin-top: 20px;
     background-color: #80f0ff;
     border: none;
     outline: none;
@@ -2767,7 +2768,7 @@ td.player-name p {
 
 .about-card2-image {
     background-image: url("../images/about-card2-image.jpg");
-
+height: 80%;
 }
 
 .about-card3-image {
@@ -3176,10 +3177,15 @@ button.player-toggle {
     align-items: center;
 }
 span.alert-success {
-        margin: 0 auto;
-        width: 100%;
-        display: block;
-        margin-bottom: 10px;
-        max-width: 400px;
-        padding: 8px;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    max-width: 400px;
+    padding: 8px;
+    background: #80f0ff;
+    border: none;
+}
+.mmy-profile-inner span.profile-success {
+    margin-top: 20px;
 }
