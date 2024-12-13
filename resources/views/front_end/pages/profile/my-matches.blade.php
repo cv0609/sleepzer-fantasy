@@ -50,11 +50,11 @@
 
                             <tr class="matche-main" data-fixture-id="{{ $match->fixture_id ?? ''}}" data-league-id="{{ $match->league->league_id ?? ''}}">
                                 <td class="match-team-logo">
-                                    <a href="match-details">
+                                    {{-- <a href="match-details"> --}}
                                         <img class="table-img me-2" src="{{ $match->home_team_logo ?? '' }}" alt="">
 
                                         <h6>{{ $match->home_team_name ?? '' }}</h6>
-                                    </a>
+                                    {{-- </a> --}}
                                 </td>
                                 <td>
                                     {{-- <h6>Kyle Field</h6>
