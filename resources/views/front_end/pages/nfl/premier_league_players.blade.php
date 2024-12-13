@@ -606,6 +606,20 @@
     </div>
 </section>
 <!-- Leagues Content Section End -->
+   <!-- Leagues Section End -->
+
+   <div id="errorModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-image">
+            <img src="{{asset('assets/images/cancel.png')}}" alt="error">
+        </div>
+        <span class="close-button"><img src="{{asset('assets/images/modal-close.png')}}" alt="" class="tab-close"></span>
+        <p id="cap-message"></p>
+        <div class="ok-btn">
+            <button class="ok-button">OK</button>
+        </div>
+    </div>
+</div>
 
 @endsection
 
@@ -689,17 +703,21 @@
     });
 
 
-    $(document).ready(function () {
+
 
         var errorModal = document.getElementById("errorModal");
         var closeButton = document.querySelector(".close-button");
         var okButton = document.querySelector(".ok-button");
 
         function showModal(message) {
-            $("#cap-message").html(message);
-            errorModal.classList.add("show-modal");
-        }
-
+                const errorModal = document.getElementById("errorModal");
+                if (!errorModal) {
+                    console.error("Error modal not found in the DOM");
+                    return;
+                }
+                document.getElementById("cap-message").innerHTML = message;
+                errorModal.classList.add("show-modal");
+            }
         function hideModal() {
             errorModal.classList.remove("show-modal");
         }
@@ -765,9 +783,6 @@
 
 
 
-
-
-    });
 
 </script>
 
