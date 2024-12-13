@@ -90,7 +90,7 @@
                                         <button class="plus player-toggle captain-plus team-view-cls"   data-event="cap_plus">
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
-                                        <button class="minus player-toggle d-none captain-minus team-view-cls" data-event="cap_minus">
+                                        <button class="minus player-toggle  captain-minus team-view-cls" data-event="cap_minus">
                                             <i class="fa-solid fa-minus"></i>
                                         </button>
                                     </p>
@@ -102,7 +102,7 @@
                                         <button class="plus player-toggle vice-cap-plus team-view-cls" data-event="vice_plus">
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
-                                        <button class="minus player-toggle d-none vice-cap-minus team-view-cls" data-event="vice_minus">
+                                        <button class="minus player-toggle  vice-cap-minus team-view-cls" data-event="vice_minus">
                                             <i class="fa-solid fa-minus"></i>
                                         </button>
                                     </p>
