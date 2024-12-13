@@ -83,7 +83,7 @@
                 <div class="tab-content tab-content-1 active">
                         <div class="constitutes-inner-content">
                             <div class="matches-table matche-det">
-                                <table cellpadding="0" cellspacing="0">
+                                <table>
                                     <thead>
                                         <tr>
                                             <!-- <th scope="col"></th> -->

@@ -80,7 +80,7 @@
                     </li>
                 </ul>
                 <p>
-                    By using the website, you confirm that you meet these eligibility requirements
+                    By using the website, you confirm that you meet these eligibility requirements.
                 </p>
             </div>
 
@@ -198,7 +198,7 @@
                     <li>
                         <p>
                             <strong>
-                                Impersonate any person or entity
+                                Impersonate any person or entity,
                             </strong>
                             including Sleepzer Fantasy staff or other users.
                         </p>
@@ -206,7 +206,7 @@
                     <li>
                         <p>
                             <strong>
-                                Post or transmit illegal, harmful, defamatory, or offensive content
+                                Post or transmit illegal, harmful, defamatory, or offensive content,
                             </strong>
                             including hate
                             speech, harassment, or content that violates the rights of others.
@@ -402,7 +402,7 @@
                 </p>
                 <p>
                     <strong>
-                        E-Mail:
+                        EMail:
                     </strong>
                     <a href="mailto:info@sleepzerfantasy.com">info@sleepzerfantasy.com</a>
                 </p>

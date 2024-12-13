@@ -2274,6 +2274,11 @@ div#mySidenavs {
     border: 3px solid #80f0ff;
     overflow: hidden;
 }
+.update_img_user_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 .edit_pan svg {
     height: 12px;
@@ -3176,7 +3181,7 @@ button.player-toggle {
     justify-content: center;
     align-items: center;
 }
-span.alert-success {
+span.alert-success  {
     margin: 0 auto;
     width: 100%;
     display: block;
@@ -3188,4 +3193,15 @@ span.alert-success {
 }
 .mmy-profile-inner span.profile-success {
     margin-top: 20px;
+}
+span.alert.alert-danger.error-msg {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    max-width: 400px;
+    padding: 8px;
+    background: rgb(244, 131, 131);
+    border: none;
+    color: #000;
 }

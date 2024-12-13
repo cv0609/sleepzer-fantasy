@@ -34,7 +34,7 @@
                     </svg>
                 </a>
             </div>
-            <h2>{{ date('Y') }} Jahreszeit</h2>
+            <h2>{{ date('Y') }} Season</h2>
 
             <div class="team-view-sec">
 

@@ -75,7 +75,7 @@
                                         <li>
                                             <p>
                                                 <strong>
-                                                    Create a Private League
+                                                    Create a Private League:
                                                 </strong>
                                                 Invite your friends, family, or coworkers to join a custom
                                                 league. Set your own rules, scoring, and draft preferences.
