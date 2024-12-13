@@ -41,9 +41,9 @@
 
                                     <div class="row">
                                         <div class="mb-3">
-                                            <input type="text" placeholder="Name" class="form-control para" id="name"
+                                            <input type="text" placeholder="Name" class="form-control para"
                                             name="first_name" id="name" required="required"
-                                            autocomplete="off" value="{{ Auth::user()->first_name }}">
+                                             value="{{ Auth::user()->first_name }}">
                                         </div>
                                         <div class="mb-3">
                                             <input type="text" placeholder="Username" class="form-control para"

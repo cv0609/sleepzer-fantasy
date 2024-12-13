@@ -38,7 +38,7 @@ class ProfileController extends Controller
         if($teams->isNotEmpty()){
 
             foreach($teams as $val){
-                
+
                 $matchDetails = Matche::with('league')->where('fixture_id',$val->match_id)->first();
 
                 if(isset($matchDetails) && !empty($matchDetails)) {
@@ -75,6 +75,7 @@ class ProfileController extends Controller
 
     public function updateProfile(UpdateProfile $request)
      {
+
         $user = ["first_name"=>$request->input('first_name'),"user_name"=>$request->input('user_name'),"email"=>$request->input('email'),"phone"=>$request->input('phone')];
         User::where(['id'=>Auth::user()->id])->update($user);
         return redirect()->route('profile.profile')->with('success','Profile updated successfully');
