@@ -2,8 +2,9 @@
     <div class="profile-sec">
         <div class="user-img">
             <div class="update_img_user">
-            <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/images/user-img.png') }}" alt="user_img">
-
+              <div class="update_img_user_img">
+              <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/images/user-img.png') }}" alt="user_img">
+              </div>
                 <form id="profile-pic-form" action="{{ route('profile.update-pic') }}" method="POST" enctype="multipart/form-data">
                    @csrf
                     <input type="file" id="profile-pic-input" name="profile_picture" style="display: none;"

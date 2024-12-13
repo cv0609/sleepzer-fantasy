@@ -1082,7 +1082,7 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 150px 0;
+    padding: 200px 0;
     background-color: rgba(0 0 0 / 50%);
     background-blend-mode: multiply;
 }
@@ -1105,7 +1105,7 @@ img {
     background-color: transparent;
     backdrop-filter: blur(10px);
     padding: 20px;
-    margin: 150px 0 0 0;
+    margin: 0px 0 0 0;
     border-radius: 0 20px;
     box-shadow: #80f0ff 0px 5px 9px;
 }
@@ -2097,10 +2097,6 @@ td.match-team-logo a {
 .profile-image {
     width: 40px;
     height: 40px;
-    background-image: url(../images/dummy.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     border-radius: 50%;
 }
 
@@ -3178,4 +3174,12 @@ button.player-toggle {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+span.alert-success {
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        max-width: 400px;
+        padding: 8px;
 }

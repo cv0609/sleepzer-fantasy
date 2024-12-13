@@ -823,5 +823,8 @@
         height: 40px;
         background-size: contain;
     }
+    span.alert-success {
+        font-size: 13px;
+    }
 
 }
