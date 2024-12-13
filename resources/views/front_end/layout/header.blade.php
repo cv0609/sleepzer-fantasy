@@ -30,7 +30,7 @@
                             <div class="avatar-content">
                                 <a href="#">
                                     <div class="profile-image">
-                                     <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/images/user-img.png') }}" alt="dp">
+                                     <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/images/user-img.jpg') }}" alt="dp">
 
                                     </div>
                                     <span>{{ ucfirst(Auth::user()->first_name) }}</span>
