@@ -11,11 +11,11 @@
 
                 <div class="navbar-menu">
                     <ul>
-                        <li><a class="active-link" href="{{ route('home') }}">Homepage</a></li>
-                        <li><a href="{{ route('play-guide') }}">How To Play</a></li>
-                        <li><a href="{{ route('blogs') }}">Blogs</a></li>
-                        <li><a href="{{ route('about.us') }}">About Us</a></li>
-                        <li><a href="{{ route('contact.us') }}">Contact Us</a></li>
+                        <li><a class="{{ Route::is('home') ? 'active-link' : ''}}" href="{{ route('home') }}">Homepage</a></li>
+                        <li><a class="{{ Route::is('play-guide') ? 'active-link' : ''}}" href="{{ route('play-guide') }}">How To Play</a></li>
+                        <li><a class="{{ Route::is('blogs') ? 'active-link' : ''}}" href="{{ route('blogs') }}">Blogs</a></li>
+                        <li><a class="{{ Route::is('about.us') ? 'active-link' : ''}}" href="{{ route('about.us') }}">About Us</a></li>
+                        <li><a class="{{ Route::is('contact.us') ? 'active-link' : ''}}" href="{{ route('contact.us') }}">Contact Us</a></li>
                     </ul>
                     @if(!Auth::check())
 
