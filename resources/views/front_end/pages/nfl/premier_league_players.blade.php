@@ -678,7 +678,6 @@
     function autoSelect()
  {
     $('.tbody tr').each(function () {
-            alert("id");
             var row = $(this);
             var leagueId = "{{$matchDetails[0]->league->league_id}}";
 
@@ -694,6 +693,7 @@
             });
 
             if (playerExists) {
+                alert("ok");
                 row.find('.plus').css('display', 'none');
                 row.find('.minus').css('display', 'block');
             } else {
