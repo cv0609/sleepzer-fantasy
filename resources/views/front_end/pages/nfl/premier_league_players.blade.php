@@ -691,9 +691,9 @@
                     .player_role == playerRole && player.player_name == playerName && player
                     .league_id == leagueId;
             });
-
+            alert(playerExists);
             if (playerExists) {
-                alert("ok");
+
                 row.find('.plus').css('display', 'none');
                 row.find('.minus').css('display', 'block');
             } else {
