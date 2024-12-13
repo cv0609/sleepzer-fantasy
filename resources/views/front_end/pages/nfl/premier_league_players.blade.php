@@ -831,7 +831,7 @@ $('.next-btn').on('click',function (e) {
 function autoSelect()
  {
     $('.tbody tr').each(function () {
-            console.log("OK");
+            alert("OK");
             var row = $(this);
             var leagueId = "{{$matchDetails[0]->league->league_id}}";
 
