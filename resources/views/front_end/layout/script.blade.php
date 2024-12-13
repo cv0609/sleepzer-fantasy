@@ -7,4 +7,4 @@
 <script src="{{ asset('assets/js/aos.js') }}"></script>
 <script src="{{ asset('assets/js/index.js') }}"></script>
 <script src="//cdn.datatables.net/2.1.4/js/dataTables.min.js"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
+{{-- <script src="{{ asset('assets/js/main.js') }}"></script> --}}

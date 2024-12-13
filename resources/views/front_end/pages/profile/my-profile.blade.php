@@ -37,7 +37,7 @@
                         <div class="tab-content tab-content-1 active">
                             <div class="user-content-box">
                                 <form action="{{ route('profile.update') }}" method="POST" class="mt-60 ">
-                                @csrf
+                                     @csrf
 
                                     <div class="row">
                                         <div class="mb-3">
