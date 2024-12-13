@@ -73,7 +73,7 @@ class ProfileController extends Controller
        return view('front_end.pages.profile.my-profile');
     }
 
-    public function updateProfile(UpdateProfile $request)
+    public function updateProfile(Request $request)
      {
 
         $user = ["first_name"=>$request->input('first_name'),"user_name"=>$request->input('user_name'),"email"=>$request->input('email'),"phone"=>$request->input('phone')];

@@ -24,7 +24,7 @@ class UpdateProfile extends FormRequest
         return [
             'first_name' => 'required|alpha',
             'user_name' => 'required|alpha',
-            'email' => 'unique:users,email,'. Auth::user()->id,
+            'email' => 'unique:users,email,'. Auth::id(),
             'phone' => 'required',
         ];
     }
