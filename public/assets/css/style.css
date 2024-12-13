@@ -2027,6 +2027,8 @@ td.my-team-captain,td.my-team-vice-captain {
     height: 25px;
     line-height: 1;
     right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .credits_points button.minus {
@@ -3176,7 +3178,7 @@ fieldset:last-child {
     text-align: left;
 }
 button.player-toggle {
-    padding: 4px;
+    padding: 3px 3px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
