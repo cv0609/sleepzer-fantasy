@@ -103,6 +103,9 @@
     #login-signup button[type="submit"] {
         font-size: 19px;
     }
+    .avatar-content {
+        justify-content: center;
+    }
 }
 
 
@@ -825,6 +828,12 @@
     }
     span.alert-success {
         font-size: 13px;
+    }
+    .mmy-profile-inner span.profile-success {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 270px;
+        font-size: 12px;
     }
 
 }
