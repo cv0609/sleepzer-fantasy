@@ -802,6 +802,7 @@ $('.next-btn').on('click',function (e) {
         var myTeam = @json(Session::get('myTeam', []));
 
         $('.tbody tr').each(function () {
+            console.log("OK");
             var row = $(this);
             var leagueId = "{{$matchDetails[0]->league->league_id}}";
 
@@ -826,8 +827,34 @@ $('.next-btn').on('click',function (e) {
         });
 
 
+        autoSelect();
+function autoSelect()
+ {
+    $('.tbody tr').each(function () {
+            console.log("OK");
+            var row = $(this);
+            var leagueId = "{{$matchDetails[0]->league->league_id}}";
 
+            var teamId = row.data('team-id');
+            var playerId = row.data('player-id');
+            var playerRole = row.data('player-role');
+            var playerName = row.data('player-name');
 
+            var playerExists = myTeam.some(function (player) {
+                return player.team_id == teamId && player.player_id == playerId && player
+                    .player_role == playerRole && player.player_name == playerName && player
+                    .league_id == leagueId;
+            });
+
+            if (playerExists) {
+                row.find('.plus').css('display', 'none');
+                row.find('.minus').css('display', 'block');
+            } else {
+                row.find('.plus').css('display', 'block');
+                row.find('.minus').css('display', 'none');
+            }
+        });
+ }
 
 
 
