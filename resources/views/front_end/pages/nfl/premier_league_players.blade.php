@@ -667,7 +667,12 @@
 @endsection
 
 @section('custom-script')
-
+  <script>
+       $(document).ready(function () {
+            alert("OK");
+        autoSelect();
+    });
+  </script>
  <script>
        $('.player-toggle').on('click',function(){
 
@@ -826,10 +831,7 @@ $('.next-btn').on('click',function (e) {
             }
         });
 
-        $(document).ready(function () {
-            alert("OK");
-        autoSelect();
-    });
+
 function autoSelect()
  {
     $('.tbody tr').each(function () {
