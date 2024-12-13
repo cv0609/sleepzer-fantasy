@@ -802,7 +802,7 @@ $('.next-btn').on('click',function (e) {
         var myTeam = @json(Session::get('myTeam', []));
 
         $('.tbody tr').each(function () {
-            console.log("OK");
+
             var row = $(this);
             var leagueId = "{{$matchDetails[0]->league->league_id}}";
 
@@ -827,12 +827,13 @@ $('.next-btn').on('click',function (e) {
         });
 
         $(document).ready(function () {
+            alert("OK");
         autoSelect();
     });
 function autoSelect()
  {
     $('.tbody tr').each(function () {
-            alert("OK");
+
             var row = $(this);
             var leagueId = "{{$matchDetails[0]->league->league_id}}";
 
