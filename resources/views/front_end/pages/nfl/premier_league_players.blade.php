@@ -598,9 +598,9 @@
 
 
             </div>
-                            <div class="team-btns">
-                                <a href="{{ route('my-team') }}" class="next-btn">next</a>
-                            </div>
+            <div class="team-btns">
+                <a href="javascript:void(0)" class="next-btn">next</a>
+            </div>
 
         </div>
     </div>
@@ -608,18 +608,61 @@
 <!-- Leagues Content Section End -->
    <!-- Leagues Section End -->
 
-   <div id="errorModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-image">
-            <img src="{{asset('assets/images/cancel.png')}}" alt="error">
+<!-- Modal failure -->
+<div class="alert-msg">
+    <div class="modal fade" id="errorModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="modal-failure-image modal-images-inner"></div>
+                </div>
+              <p id="cap-message">
+
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button class="modal-btn btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Ok</button>
+            </div>
+          </div>
         </div>
-        <span class="close-button"><img src="{{asset('assets/images/modal-close.png')}}" alt="" class="tab-close"></span>
-        <p id="cap-message"></p>
-        <div class="ok-btn">
-            <button class="ok-button">OK</button>
-        </div>
+      </div>
+      {{-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Modal Failure</button> --}}
     </div>
-</div>
+    <!-- Modal Failure -->
+
+
+    <!-- Modal Success -->
+    <div class="alert-msg">
+        <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel1">Modal 1</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <div class="modal-success-image modal-images-inner"></div>
+                    </div>
+                  <p>
+                    You can add only 1-3 player.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button class="modal-btn btn btn-primary" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">Ok</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">Modal Success</button> --}}
+        </div>
+        <!-- Modal Success -->
+
 
 @endsection
 
@@ -668,11 +711,11 @@
             if (response.success === true) {
                 if (button.hasClass('plus')) {
                     button.hide();
-                    button.closest('td').find('.minus').show();
+                    button.closest('td').find('.minus').removeClass('d-none').show();
                     row.addClass('select-player');
                 } else {
                     button.hide();
-                    button.closest('td').find('.plus').show();
+                    button.closest('td').find('.plus').removeClass('d-none').show();
                     row.removeClass('select-player');
                 }
             } else {
@@ -684,6 +727,28 @@
         }
     });
 });
+
+
+$('.next-btn').on('click',function (e) {
+            e.preventDefault();
+
+            var nextBtn = $(this);
+
+            $.get("{{ route('current-team-count') }}", function (data, status) {
+
+                if (data.success == true && data.count != 11) {
+                    // $("#error-message").html('Your team must have exactly 5 players.');
+                    showModal('Your team must have exactly 11 players');
+
+                    // $("#cap-message").html('Your team must have exactly 5 players.');
+                    // $('#capModal').modal('show');
+                    return false;
+
+                } else {
+                    window.location.href =  "{{ route('my-team') }}"; //nextBtn.attr('href');
+                }
+            });
+        });
  </script>
 
 <script>
@@ -716,7 +781,8 @@
                     return;
                 }
                 document.getElementById("cap-message").innerHTML = message;
-                errorModal.classList.add("show-modal");
+                $("#errorModal").modal('show');
+                //errorModal.classList.add("show-modal");
             }
         function hideModal() {
             errorModal.classList.remove("show-modal");
@@ -759,26 +825,7 @@
             }
         });
 
-        $('.next-btn').click(function (e) {
-            e.preventDefault();
 
-            var nextBtn = $(this);
-
-            $.get("{{ route('current-team-count') }}", function (data, status) {
-
-                if (data.success == true && data.count != 11) {
-                    // $("#error-message").html('Your team must have exactly 5 players.');
-                    showModal('Your team must have exactly 11 players');
-
-                    // $("#cap-message").html('Your team must have exactly 5 players.');
-                    // $('#capModal').modal('show');
-                    return false;
-
-                } else {
-                    window.location.href = nextBtn.attr('href');
-                }
-            });
-        });
 
 
 

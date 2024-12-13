@@ -29,7 +29,7 @@ class NflController extends Controller
     }
 
     public function getLeague()
-    {        
+    {
         $leagues = League::whereHas('leagueMatches', function ($query) {
           $query->whereHas('matchPlayers');
         })->orderBy('start_date','desc')->get();
@@ -42,7 +42,7 @@ class NflController extends Controller
         Session::forget(['myTeam']);
 
         $matches = Matche::getMatchByLeagueId($leagueId);
-   
+
         if(isset($matches) && !empty($matches))
          {
             return view('front_end.pages.nfl.matches',compact('matches'));
@@ -54,8 +54,8 @@ class NflController extends Controller
      }
 
     public function matchDetails($matcheId)
-      {   
-        $matchDetails = Matche::with(['matchPlayers','league'])->where('id',$matcheId)->get();    
+      {
+        $matchDetails = Matche::with(['matchPlayers','league'])->where('id',$matcheId)->get();
 
         $organizedPlayers = [
             'DT' => [],
@@ -74,9 +74,9 @@ class NflController extends Controller
         if(isset($matchDetails[0]->matchPlayers) && !empty($matchDetails[0]->matchPlayers)){
 
             foreach($matchDetails[0]->matchPlayers as $player){
-    
+
                 if (isset($organizedPlayers[$player->position])) {
-                    
+
                     $organizedPlayers[$player->position][] = $player;
                 }
             }
@@ -180,11 +180,19 @@ class NflController extends Controller
     }
 
     public function viewTeam(){
-        $myTeam = [];
+        $myTeam = $matchDetails = [];
         if(Session::has('myTeam')){
             $myTeam = Session::get('myTeam', []);
+            $league_id = $myTeam[0]['league_id'];
+            $match_id = $myTeam[0]['match_id'];
+
+            $matchDetails = Matche::where('fixture_id',$match_id)->get();
+
+
+            //$teamData = Team::create(['team_number' => $team_number,'league_id' =>$league_id,'match_id' =>$match_id]);
         }
-        return view('front_end.pages.nfl.team-view',compact('myTeam'));
+
+        return view('front_end.pages.nfl.team-view',compact('myTeam','matchDetails'));
     }
 
     public function currentTeamCount(){
