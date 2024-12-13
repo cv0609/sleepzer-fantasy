@@ -118,12 +118,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -165,11 +165,11 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
-                            </div>                           
+                            </div>
                         </div>
                     </div>
 
@@ -211,12 +211,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -258,12 +258,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -305,12 +305,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -352,12 +352,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -399,12 +399,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -446,12 +446,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -493,12 +493,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -540,12 +540,12 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
 
@@ -587,18 +587,14 @@
                                                 <button class="minus player-toggle d-none" data-event="minus">
                                                     <img src="{{asset('assets/images/tab-minus.png')}}" alt="minus" class="tab-minus"> </button>
                                             </td>
-                                        </tr>   
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        
+
                         </div>
                     </div>
-
-
-
-
 
 
             </div>
@@ -614,6 +610,67 @@
 @endsection
 
 @section('custom-script')
+
+ <script>
+       $('.player-toggle').on('click',function(){
+
+    var button = $(this);
+    var row = button.closest('tr');
+    var leagueId = "{{$matchDetails[0]->league->league_id}}"; // Ensure this resolves correctly
+
+    console.log("League ID:", leagueId);
+
+    // Extract data attributes
+    var formData = {
+        team_id: row.data('team-id'),
+        player_id: row.data('player-id'),
+        player_role: row.data('player-role'),
+        leagueId: leagueId,
+        player_name: row.data('player-name'),
+        event: button.data('event'),
+        team_logo: row.data('team-logo'),
+        match_id: row.data('match-id'),
+        team_name: row.data('team-name'),
+        homeTeamId: row.data('home-team'),
+        awayTeamId: row.data('away-team'),
+        dbMatchId: row.data('slug-matchid'),
+    };
+
+    console.log("Form Data:", formData);
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        url: "{{ route('create-team') }}",
+        type: 'POST',
+        data: formData,
+        success: function (response) {
+            console.log("Response:", response);
+
+            if (response.success === true) {
+                if (button.hasClass('plus')) {
+                    button.hide();
+                    button.closest('td').find('.minus').show();
+                    row.addClass('select-player');
+                } else {
+                    button.hide();
+                    button.closest('td').find('.plus').show();
+                    row.removeClass('select-player');
+                }
+            } else {
+                showModal(response.message); // Ensure this function exists
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error('Error:', error);
+        }
+    });
+});
+ </script>
 
 <script>
     $('.tab').on('click', function (evt) {
@@ -705,77 +762,8 @@
             });
         });
 
-        $(document).on('click', '.player-toggle', function () {
-           
-            var team_id = $(this).closest('tr').data('team-id');
-            var player_id = $(this).closest('tr').data('player-id');
-            var player_role = $(this).closest('tr').data('player-role');
-            var leagueId = "{{$matchDetails[0]->league->league_id}}";
-            var player_name = $(this).closest('tr').data('player-name');
-            var team_logo = $(this).closest('tr').data('team-logo');
-            var match_id = $(this).closest('tr').data('match-id');
-            var team_name = $(this).closest('tr').data('team-name');
-            var homeTeamId = $(this).closest('tr').data('home-team');
-            var awayTeamId = $(this).closest('tr').data('away-team');
-            var dbMatchId = $(this).closest('tr').data('slug-matchid');
 
-            var button = $(this); // Store reference to the clicked button
-            var isPlus = button.hasClass('plus'); // Check if the clicked button is a "plus" button
-            var event = $(this).data('event');
-            var formData = {
-                team_id: team_id,
-                player_id: player_id,
-                player_role: player_role,
-                leagueId: leagueId,
-                player_name: player_name,
-                event: event,
-                team_logo: team_logo,
-                match_id: match_id,
-                team_name: team_name,
-                homeTeamId: homeTeamId,
-                awayTeamId: awayTeamId,
-                dbMatchId: dbMatchId,
-            };
 
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            $.ajax({
-                url: "{{ route('create-team') }}",
-                type: 'POST',
-                data: formData,
-                success: function (response) {
-                    if (response.success == true) {
-                        if (isPlus) {
-
-                            button.css('display', 'none');
-                            button.closest('td').find('.minus').css('display', 'block');
-                            button.parent('td').parent('tr').addClass('select-player');
-                        } else {
-                            button.css('display', 'none');
-                            button.closest('td').find('.plus').css('display', 'block');
-                            button.parent('td').parent('tr').removeClass('select-player');
-
-                        }
-                    } else {
-                        // $("#error-message").html(response.message);
-                        // $("#errorModal2").modal('show');
-                        // alert(response.message);
-                        showModal(response.message);
-
-                        // $("#cap-message").html(response.message);
-                        // $('#capModal').modal('show');
-                        return false;
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.error('Error:', error);
-                }
-            });
-        });
 
 
 
