@@ -51,7 +51,7 @@
 
                             <tr>
                                 <td class="league-logo">
-                                <img class="lazy-load" data-src="{{ $league->logo }}" alt="league-logo">
+                                <img src="{{ $league->logo }}" class="lazy-load" data-src="{{ $league->logo }}" alt="league-logo">
 
                                     <a href="{{ route('leagueMatches',['leagueId'=>$league->id]) }}"></a>
                                 </td>
@@ -128,7 +128,7 @@
         $('.dt-input').on('keyup change', function () {
             lazyLoading();
         });
-   
+
 
     function lazyLoading() {
         let lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
