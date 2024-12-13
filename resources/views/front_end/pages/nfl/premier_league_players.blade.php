@@ -669,7 +669,7 @@
 @section('custom-script')
   <script>
        $(document).ready(function () {
-            alert("OK");
+
         autoSelect();
     });
   </script>
@@ -835,7 +835,7 @@ $('.next-btn').on('click',function (e) {
 function autoSelect()
  {
     $('.tbody tr').each(function () {
-
+            alert("id");
             var row = $(this);
             var leagueId = "{{$matchDetails[0]->league->league_id}}";
 
