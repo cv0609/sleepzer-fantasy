@@ -128,8 +128,8 @@
                                 <div class="form-wrapper">
                                 @if(Session::has('success'))
                                     <span class="alert alert-success text-center" style="width:100%;">{{ Session::get('success') }}</span>
-                                @endif  
-                                    <form id="contact" action="{{ route('contact.save') }}" method="post">
+                                @endif
+                                    <form class="content-form-class" action="{{ route('contact.save') }}" method="post" id="contact">
                                         @csrf
                                         <fieldset>
                                             <input class="contact-form" placeholder="Your Name" type="text" tabindex="1"
@@ -163,6 +163,8 @@
                                             <button name="submit" type="button" class="contact-submit butn contact-btn"
                                                 data-submit="...Sending">
                                                 Submit </button>
+
+                                            <button class="d-none" type="submit" id="form-submit-btn"></button>
                                         </fieldset>
                                     </form>
                                 </div>
@@ -192,7 +194,7 @@
 @section('custom-script')
 
 <script>
-    $(document).ready(function () {
+
 
         $('.contact-btn').on('click', function () {
             var valid = true;
@@ -222,7 +224,7 @@
                 valid = false;
             }
 
-            
+
             if ($('#message-text-area').val().trim() === '') {
                 $('#messageError').removeClass('d-none').css('display', 'block').text('Message field is required.');
                 valid = false;
@@ -238,10 +240,10 @@
             //     $('#agreeError').removeClass('d-none').text('You must agree to the terms.');
             //     valid = false;
             // }
-            
+
             if (valid === true) {
-                
-                $('#contact').submit();
+                console.log(valid);
+                $("#form-submit-btn").click();
             }
         });
 
@@ -249,7 +251,7 @@
 
 
 
-    });
+
 
 </script>
 
