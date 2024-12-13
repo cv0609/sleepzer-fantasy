@@ -368,7 +368,7 @@
         padding: 15px;
     }
     .toggle-target a {
-        width: 50%;
+        width: 25%;
     }
     .profile-side,.col-sec {
         width: 100%;
@@ -573,7 +573,6 @@
     .toggle-target a {
         font-size: 15px;
         padding: 10px 15px;
-        width: 50%;
     }
     .team-view-header ul li {
         justify-content: flex-start;
