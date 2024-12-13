@@ -6,7 +6,7 @@
     <div class="container">
         <div class="sub-banner-content">
             <h1>
-                Blogposts
+                Blog Posts
             </h1>
         </div>
     </div>
